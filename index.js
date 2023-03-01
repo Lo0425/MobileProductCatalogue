@@ -4,10 +4,9 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
 
-mongoose.connect(process.env.MONGO_DB)
+mongoose.connect(process.env.MONGO_DB);
 
 app.use(express.static("uploads"));
-
 
 app.use(cors());
 app.use(express.json());
